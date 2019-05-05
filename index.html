@@ -303,6 +303,7 @@
             <p>参考链接：<a href="https://segmentfault.com/a/1190000012062665" target="_blank" rel="noopener">https://segmentfault.com/a/1190000012062665</a></p>
 <h4 id="问题来源"><a href="#问题来源" class="headerlink" title="问题来源"></a>问题来源</h4><blockquote>
 <p>在工作中涉及对配置项分割处理，现场测试报有数据越界的问题。问题根源在于，现场需要将配置项中的某一个配置为空，于是出现了A;B ;;C这样的配置，导致数组越界异常。</p>
+<p>原有代码中使用了org.apache.commons.lang.StringUtils.split(“;”);  替换使用java.lang.String.split(str, “;”); 问题得到解决。</p>
 </blockquote>
 
           
