@@ -442,7 +442,11 @@
             <p>参考链接：<a href="https://segmentfault.com/a/1190000012062665" target="_blank" rel="noopener">https://segmentfault.com/a/1190000012062665</a></p>
 <h4 id="问题来源"><a href="#问题来源" class="headerlink" title="问题来源"></a>问题来源</h4><blockquote>
 <p>在工作中涉及对配置项分割处理，现场测试报有数据越界的问题。问题根源在于，现场需要将配置项中的某一个配置为空，于是出现了<code>A;B;;C</code>这样的配置，导致数组越界异常。</p>
-<p>原有代码中使用了<code>org.apache.commons.lang.StringUtils.split(&quot;;&quot;);</code>  替换使用<code>java.lang.String.split(str, &quot;;&quot;);</code> 问题得到解决。</p>
+</blockquote>
+<h4 id="问题解决方式"><a href="#问题解决方式" class="headerlink" title="问题解决方式"></a>问题解决方式</h4><p>原有代码中使用了<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">org.apache.commons.lang.StringUtils.split(<span class="string">";"</span>);`</span><br></pre></td></tr></table></figure></p>
+<p>替换使用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java.lang.String.split(str, <span class="string">";"</span>);</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>具体原因以及语法问题参考提供链接</p>
 </blockquote>
 
           
