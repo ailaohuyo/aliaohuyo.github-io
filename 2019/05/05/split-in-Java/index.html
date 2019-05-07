@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="参考链接：https://segmentfault.com/a/1190000012062665 问题来源 在工作中涉及对配置项分割处理，现场测试报有数据越界的问题。问题根源在于，现场需要将配置项中的某一个配置为空，于是出现了A;B ;;C这样的配置，导致数组越界异常。 原有代码中使用了org.apache.commons.lang.StringUtils.split(“;”);  替换使用jav">
+<meta name="description" content="参考链接：https://segmentfault.com/a/1190000012062665 问题来源 在工作中涉及对配置项分割处理，现场测试报有数据越界的问题。问题根源在于，现场需要将配置项中的某一个配置为空，于是出现了A;B;;C这样的配置，导致数组越界异常。 原有代码中使用了org.apache.commons.lang.StringUtils.split(&amp;quot;;&amp;quot;);">
 <meta name="keywords" content="Java语法研究">
 <meta property="og:type" content="article">
 <meta property="og:title" content="split() in Java">
 <meta property="og:url" content="http://yoursite.com/2019/05/05/split-in-Java/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="参考链接：https://segmentfault.com/a/1190000012062665 问题来源 在工作中涉及对配置项分割处理，现场测试报有数据越界的问题。问题根源在于，现场需要将配置项中的某一个配置为空，于是出现了A;B ;;C这样的配置，导致数组越界异常。 原有代码中使用了org.apache.commons.lang.StringUtils.split(“;”);  替换使用jav">
+<meta property="og:description" content="参考链接：https://segmentfault.com/a/1190000012062665 问题来源 在工作中涉及对配置项分割处理，现场测试报有数据越界的问题。问题根源在于，现场需要将配置项中的某一个配置为空，于是出现了A;B;;C这样的配置，导致数组越界异常。 原有代码中使用了org.apache.commons.lang.StringUtils.split(&amp;quot;;&amp;quot;);">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-05T04:34:10.522Z">
+<meta property="og:updated_time" content="2019-05-07T04:23:41.835Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="split() in Java">
-<meta name="twitter:description" content="参考链接：https://segmentfault.com/a/1190000012062665 问题来源 在工作中涉及对配置项分割处理，现场测试报有数据越界的问题。问题根源在于，现场需要将配置项中的某一个配置为空，于是出现了A;B ;;C这样的配置，导致数组越界异常。 原有代码中使用了org.apache.commons.lang.StringUtils.split(“;”);  替换使用jav">
+<meta name="twitter:description" content="参考链接：https://segmentfault.com/a/1190000012062665 问题来源 在工作中涉及对配置项分割处理，现场测试报有数据越界的问题。问题根源在于，现场需要将配置项中的某一个配置为空，于是出现了A;B;;C这样的配置，导致数组越界异常。 原有代码中使用了org.apache.commons.lang.StringUtils.split(&amp;quot;;&amp;quot;);">
 
 
 
@@ -302,8 +302,8 @@
       
         <p>参考链接：<a href="https://segmentfault.com/a/1190000012062665" target="_blank" rel="noopener">https://segmentfault.com/a/1190000012062665</a></p>
 <h4 id="问题来源"><a href="#问题来源" class="headerlink" title="问题来源"></a>问题来源</h4><blockquote>
-<p>在工作中涉及对配置项分割处理，现场测试报有数据越界的问题。问题根源在于，现场需要将配置项中的某一个配置为空，于是出现了A;B ;;C这样的配置，导致数组越界异常。</p>
-<p>原有代码中使用了org.apache.commons.lang.StringUtils.split(“;”);  替换使用java.lang.String.split(str, “;”); 问题得到解决。</p>
+<p>在工作中涉及对配置项分割处理，现场测试报有数据越界的问题。问题根源在于，现场需要将配置项中的某一个配置为空，于是出现了<code>A;B;;C</code>这样的配置，导致数组越界异常。</p>
+<p>原有代码中使用了<code>org.apache.commons.lang.StringUtils.split(&quot;;&quot;);</code>  替换使用<code>java.lang.String.split(str, &quot;;&quot;);</code> 问题得到解决。</p>
 </blockquote>
 
       
@@ -344,6 +344,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/07/项目疑问/" rel="prev" title="项目疑问">
+                项目疑问 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -420,7 +424,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -433,7 +437,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
