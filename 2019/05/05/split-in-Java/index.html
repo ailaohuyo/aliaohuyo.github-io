@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="参考链接：https://segmentfault.com/a/1190000012062665 问题来源 在工作中涉及对配置项分割处理，现场测试报有数据越界的问题。问题根源在于，现场需要将配置项中的某一个配置为空，于是出现了A;B;;C这样的配置，导致数组越界异常。  问题解决方式原有代码中使用了1org.apache.commons.lang.StringUtils.split(&quot;;&quot;);`">
+<meta name="description" content="参考链接：https://segmentfault.com/a/1190000012062665 问题来源 在工作中涉及对配置项分割处理，现场测试报有数据越界的问题。问题根源在于，现场需要将配置项中的某一个配置为空，于是出现了A;B;;C这样的配置，导致数组越界异常。  问题解决方式原有代码中使用了1org.apache.commons.lang.StringUtils.split(str, &quot;;">
 <meta name="keywords" content="Java语法研究">
 <meta property="og:type" content="article">
 <meta property="og:title" content="split() in Java">
 <meta property="og:url" content="http://yoursite.com/2019/05/05/split-in-Java/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="参考链接：https://segmentfault.com/a/1190000012062665 问题来源 在工作中涉及对配置项分割处理，现场测试报有数据越界的问题。问题根源在于，现场需要将配置项中的某一个配置为空，于是出现了A;B;;C这样的配置，导致数组越界异常。  问题解决方式原有代码中使用了1org.apache.commons.lang.StringUtils.split(&quot;;&quot;);`">
+<meta property="og:description" content="参考链接：https://segmentfault.com/a/1190000012062665 问题来源 在工作中涉及对配置项分割处理，现场测试报有数据越界的问题。问题根源在于，现场需要将配置项中的某一个配置为空，于是出现了A;B;;C这样的配置，导致数组越界异常。  问题解决方式原有代码中使用了1org.apache.commons.lang.StringUtils.split(str, &quot;;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-07T04:38:34.327Z">
+<meta property="og:updated_time" content="2019-05-07T04:42:24.989Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="split() in Java">
-<meta name="twitter:description" content="参考链接：https://segmentfault.com/a/1190000012062665 问题来源 在工作中涉及对配置项分割处理，现场测试报有数据越界的问题。问题根源在于，现场需要将配置项中的某一个配置为空，于是出现了A;B;;C这样的配置，导致数组越界异常。  问题解决方式原有代码中使用了1org.apache.commons.lang.StringUtils.split(&quot;;&quot;);`">
+<meta name="twitter:description" content="参考链接：https://segmentfault.com/a/1190000012062665 问题来源 在工作中涉及对配置项分割处理，现场测试报有数据越界的问题。问题根源在于，现场需要将配置项中的某一个配置为空，于是出现了A;B;;C这样的配置，导致数组越界异常。  问题解决方式原有代码中使用了1org.apache.commons.lang.StringUtils.split(str, &quot;;">
 
 
 
@@ -304,8 +304,8 @@
 <h4 id="问题来源"><a href="#问题来源" class="headerlink" title="问题来源"></a>问题来源</h4><blockquote>
 <p>在工作中涉及对配置项分割处理，现场测试报有数据越界的问题。问题根源在于，现场需要将配置项中的某一个配置为空，于是出现了<code>A;B;;C</code>这样的配置，导致数组越界异常。</p>
 </blockquote>
-<h4 id="问题解决方式"><a href="#问题解决方式" class="headerlink" title="问题解决方式"></a>问题解决方式</h4><p>原有代码中使用了<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">org.apache.commons.lang.StringUtils.split(<span class="string">";"</span>);`</span><br></pre></td></tr></table></figure></p>
-<p>替换使用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java.lang.String.split(str, <span class="string">";"</span>);</span><br></pre></td></tr></table></figure></p>
+<h4 id="问题解决方式"><a href="#问题解决方式" class="headerlink" title="问题解决方式"></a>问题解决方式</h4><p>原有代码中使用了<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">org.apache.commons.lang.StringUtils.split(str, <span class="string">";"</span>);</span><br></pre></td></tr></table></figure></p>
+<p>替换使用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java.lang.String.split(<span class="string">";"</span>);</span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p>具体原因以及语法问题参考提供链接</p>
 </blockquote>
